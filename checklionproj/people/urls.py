@@ -4,6 +4,7 @@ from people import views
 
 router = DefaultRouter()
 router.register('team', views.TeamViewSet)
+router.register('student', views.StudentViewSet)
 
 
 urlpatterns = [
