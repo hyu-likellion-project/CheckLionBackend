@@ -4,6 +4,7 @@ from checklion import views
 
 router = DefaultRouter()
 router.register('status', views.StatusViewSet)
+router.register('teampoint', views.TeamPointViewSet)
 
 
 
