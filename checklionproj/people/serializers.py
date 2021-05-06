@@ -7,6 +7,9 @@ class TeamSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class StudentSerializer(serializers.ModelSerializer):
+
+    user_name = serializers.ReadOnlyField(source='user.username')
+
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ('id','user_name','team')
