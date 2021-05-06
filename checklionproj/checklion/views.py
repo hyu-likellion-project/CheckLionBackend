@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Status,TeamPoint
-from .serializers import StatusSerializer,TeamPointSerializer
+from .models import Status,TeamPoint,Week
+from .serializers import StatusSerializer,TeamPointSerializer,WeekSerializer
 
 class StatusViewSet(viewsets.ModelViewSet):
     queryset = Status.objects.all()
@@ -18,6 +18,10 @@ class StatusViewSet(viewsets.ModelViewSet):
 class TeamPointViewSet(viewsets.ModelViewSet):
     queryset = TeamPoint.objects.all()
     serializer_class = TeamPointSerializer
+
+class WeekViewSet(viewsets.ModelViewSet):
+    queryset = Week.objects.all()
+    serializer_class = WeekSerializer
 
 
 
