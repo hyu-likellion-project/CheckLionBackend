@@ -3,7 +3,7 @@ from .models import Team, Student
 from .serializers import TeamSerializer, StudentSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
-    queryset = Team.objects.all()
+    queryset = Team.objects.all().order_by('-totalScore')
     serializer_class = TeamSerializer
 
 class StudentViewSet(viewsets.ModelViewSet):
