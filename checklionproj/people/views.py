@@ -1,8 +1,10 @@
 from rest_framework import viewsets
 from .models import Team, Student
 from .serializers import TeamSerializer, StudentSerializer
+from rest_framework.permissions import AllowAny
 
 class TeamViewSet(viewsets.ModelViewSet):
+    permission_classes = [AllowAny]
     queryset = Team.objects.all().order_by('-totalScore')
     serializer_class = TeamSerializer
 
