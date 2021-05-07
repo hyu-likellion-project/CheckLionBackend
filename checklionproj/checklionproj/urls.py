@@ -11,6 +11,6 @@ urlpatterns = [
     
     #path('api-auth/', include('rest_framework.urls')),
     path('', include('people.urls')),
-    path('check', include('checklion.urls')),
+    path('check/', include('checklion.urls')),
 
 ]
