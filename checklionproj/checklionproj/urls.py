@@ -11,5 +11,4 @@ urlpatterns = [
     path('', include('people.urls')),
     path('check/', include('checklion.urls')),
     path('rest-auth/', include('rest_auth.urls')),
-
 ]
