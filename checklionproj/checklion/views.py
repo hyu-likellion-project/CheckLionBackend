@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from .models import Status,TeamPoint,Week
 from .serializers import StatusSerializer,TeamPointSerializer,WeekSerializer
 
+
 class StatusViewSet(viewsets.ModelViewSet):
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
