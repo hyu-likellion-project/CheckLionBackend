@@ -22,10 +22,11 @@ class Status(models.Model):
 class TeamPoint(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
     week = models.ForeignKey(Week, on_delete=models.SET_NULL, null=True)
-    AdditionalPoint = models.IntegerField(default=0)
+    additionalPoint = models.IntegerField(default=0)
     assignmentPass = models.IntegerField(default=0)
     attendancePass = models.IntegerField(default=0)
     lecturePass = models.IntegerField(default=0)
+    
 
     def __str__(self):
         return str(self.id)
