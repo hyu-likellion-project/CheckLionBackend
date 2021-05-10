@@ -26,6 +26,7 @@ class TeamPoint(models.Model):
     assignmentPass = models.IntegerField(default=0)
     attendancePass = models.IntegerField(default=0)
     lecturePass = models.IntegerField(default=0)
+    weekScore = models.IntegerField(default=0)
 
     def __str__(self):
         return str(self.id)
