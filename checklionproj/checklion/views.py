@@ -20,6 +20,15 @@ class TeamPointViewSet(viewsets.ModelViewSet):
     queryset = TeamPoint.objects.all()
     serializer_class = TeamPointSerializer
 
+    def get_queryset(self):
+        queryset = TeamPoint.objects.all()
+        teamid = self.request.query_params.get("teamid", None)
+        week = self.request.query_params.get("week", None)
+        if teamid is not None and week is not None:
+            queryset = queryset.filter(team=teamid)
+            queryset = queryset.filter(week=week)
+        return queryset
+
 class WeekViewSet(viewsets.ModelViewSet):
     queryset = Week.objects.all()
     serializer_class = WeekSerializer
